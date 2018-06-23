@@ -1,0 +1,27 @@
+.paginations {
+    display: flex;
+    justify-content: center;
+    ul {
+        li {
+            a {
+                border: 0px;
+                color: #6dc212;
+                &:hover {
+                    color: #6dc212;
+                    background: transparent;
+                }
+                &:focus {
+                    color: #6dc212;
+                    background: transparent;
+                }
+                &.active {
+                    color: #4d4d4d;
+                }
+            }
+        }
+    }
+    .pagination {
+        margin-bottom: 47px;
+        margin-top: 0px;
+    }
+}

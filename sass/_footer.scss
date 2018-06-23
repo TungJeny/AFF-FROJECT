@@ -1,0 +1,41 @@
+.footer {
+    background: $background-primary;
+    height: 100px;
+    color: #aeaeae;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    &__right {
+        span {
+            padding: 0 13px;
+            font-family: RobotoRegular;
+            font-size: 12px;
+        }
+    }
+    &__left {
+        font-size: 12px;
+        font-family: RobotoRegular;
+    }
+}
+
+@media only screen and (max-width:768px) and (min-width:320px) {
+    .footer {
+        height: 249px;
+        &__block {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__left {
+            font-size: 24px;
+        }
+        &__right {
+            margin-bottom: 44px;
+            span {
+                font-size: 24px;
+                &:first-child {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+}

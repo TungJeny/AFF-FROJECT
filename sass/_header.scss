@@ -1,0 +1,148 @@
+    .header {
+        height: 100px;
+        background: $background-primary;
+        & &__menu {
+            padding-top: 48px;
+            background: $background-primary;
+            ul {
+                li {
+                    a {
+                        color: $color-text;
+                        text-transform: uppercase;
+                        font-family: RobotoRegular;
+                        font-size: 14px;
+                        &:hover {
+                            color: $color-text;
+                        }
+                        &:focus {
+                            color: $color-text;
+                        }
+                    }
+                }
+            }
+            &-left {}
+            &-right {
+                li {
+                    a {
+                        span {
+                            font-size: 14px;
+                            font-family: RobotoRegular;
+                        }
+                    }
+                }
+            }
+        }
+        &__nav {
+            border: 0px;
+        }
+        &__humberger {}
+        &__logo {}
+        & &__form {
+            position: relative;
+            input[type="text"] {
+                padding-left: 26px;
+                color: $color-text;
+            }
+            &-submit {
+                img {
+                    position: absolute;
+                    top: 10px;
+                    left: 24px;
+                }
+            }
+            &-search {
+                border-radius: 45px;
+                background: $background-primary;
+                &::placeholder {
+                    text-align: center;
+                    color: $color-text;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        &__search-mobile {
+            display: none;
+        }
+    }
+    /* css mobile max-width 768px and (min-width:320px) */
+    
+    @media only screen and (max-width:768px) {
+        .header {
+            height: 129px;
+            & &__menu {
+                padding-top: 0px;
+                //background: $background-primary;
+                height: auto;
+                margin: 0px -15px;
+                z-index: 100;
+            }
+            &__form {
+                display: none;
+            }
+            &__nav {
+                height: 129px;
+                background: $background-primary;
+                margin-bottom: 0px;
+                border-bottom: 0px;
+            }
+            &__logo {
+                width: 100%;
+                img {
+                    position: relative;
+                    margin: auto;
+                }
+            }
+            &__search-mobile {
+                &__btn {
+                    float: right;
+                    padding-right: 15px;
+                }
+                display: block;
+                button {
+                    border: 0px;
+                    background: transparent;
+                    img {
+                        padding-top: 56px;
+                    }
+                    &:focus {
+                        border: 0px;
+                        outline: none;
+                    }
+                }
+            }
+            & &__humberger {
+                float: left;
+                margin-top: 45px;
+                margin-left: 15px;
+                span {
+                    color: $color-text;
+                }
+                &:focus {
+                    background: $background-primary;
+                }
+                &:hover {
+                    background: $background-primary;
+                }
+            }
+            &__navbar {
+                height: 127px;
+            }
+        }
+    }
+    /* css tablets max-width 992px down 768px */
+    
+    @media only screen and (max-width:992px) {
+        .header {
+            &__menu {
+                &-left {}
+                &-right {
+                    //display: none;
+                }
+            }
+            &__form {
+                display: none;
+            }
+        }
+    }
